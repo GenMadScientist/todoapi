@@ -10,5 +10,5 @@ urlpatterns = [
     path('update_todo/<int:id>',views.update_todo),
     path('search', views.search),
     path('users',UsersList.as_view()),
-    path('<int:todo_id>/create_comment',CreateComment.as_view())
+    path('<int:todo_id>/create_comment',CreateComment.as_view()),
 ]

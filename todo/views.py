@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 import json
+from django.views import View
 from django.db.models import Q
 from todo.models import Todo,Like
 from todo.serializers import TodoListSerializers,TodoDetailsSerializers,SearchSerializers,ProfileSerializers, UserSerializers,LikeSerializers

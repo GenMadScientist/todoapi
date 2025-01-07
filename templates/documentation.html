@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <section class>
+        <h1 class="header"> DOCUMENTATION FOR THE TODO API</h1>
+        <div>
+            <h2>Todo app urls</h2>
+            <ol>
+                <li>path('', views.index)<p>This takes the user to the todo list page</p></li>
+                <li>path('todo_details/<int:id>', views.todo_details,name="todo_details"),<p>This takes the user to the details page of a particular todo</p></li>
+                <li>path('todo_create',views.todo_create),<p>The url is for creating new todo</p></li>
+                <li>path('delete_todo/<int:id>', views.delete_todo)<p>The url is for deleting a particular todo</p></li>
+                <li>path('update_todo/<int:id>',views.update_todo)<p>This is for updating todos with a particular id</p></li>
+                <li>path('search', views.search)<p>for searching for different types of todo</p></li>
+                <li>path('users',UsersList.as_view())<p>for displaying the list of avaliable users</p></li>
+                <li>path('<int:todo_id>/create_comment',CreateComment.as_view())<p>for creating comments to a particular todo</p></li>
+            </ol>
+        </div>
+        <div>
+            <h2>Accounts App</h2>
+            <ol>
+                <li>path('register',RegisterUser.as_view()),<p>This is the endpiont for user registration</p></li>
+                <li>path('login', LogIn.as_view()),<p>This is the endpiont for users to login</p></li>
+                <lI>path('logout', LogOut.as_view()) <p>Endpiont for logging out</p></lI>
+                <li>path('jwt_login',TokenObtainPairView.as_view())<p>This is for jwt login,using token for authentication</p></li>
+                <li>path('jwt_refresh',TokenRefreshView.as_view())<p></p></li>
+            </ol>
+        </div>
+        <div>
+            <h2>Comments App</h2>
+            <ol>
+                <li>path('',CommentList.as_view())<p>For displaying the total comments in the database</p></li>
+                <li>path('comment-details/<int:comment_id>',CommentDetail.as_view()),<p>The endpiont for viewing commenst in details</p></li>
+                <li>path('comment-details/<int:comment_id>/thumbsup',ThumbsUp.as_view()),<p>It is an endpiont for users to send a thumbsup for comments that they like</p></li>
+                <li>path('comment-details/<int:comment_id>/thumbsdown',ThumbsDown.as_view())<p>This is an endpiont for giving a comments thumbsdown when the user is not statisfied with the comment </p></li>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>
